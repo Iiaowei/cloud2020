@@ -12,21 +12,23 @@
   <modules>
     <module>cloud-provider-payment8001</module>
     <module>cloud-consumer-order80</module>
-      <module>cloud-api-commons</module>
-      <module>cloud-eureka-server7001</module>
+    <module>cloud-api-commons</module>
+    <module>cloud-eureka-server7001</module>
     <module>cloud-eureka-server7002</module>
     <module>cloud-provider-payment8002</module>
-      <module>cloud-provider-payment8004</module>
+    <module>cloud-provider-payment8004</module>
     <module>cloud-consumerzk-order80</module>
     <module>cloud-provider-payment8006</module>
     <module>cloud-consumer-consul-order80</module>
-      <module>cloud-consumer-feign-order80</module>
+    <module>cloud-consumer-feign-order80</module>
     <module>cloud-provider-hystrix-payment8001</module>
     <module>cloud-consumer-feign-hystrix-order80</module>
-      <module>cloud-consumer-hystrix-dashboard9001</module>
+    <module>cloud-consumer-hystrix-dashboard9001</module>
+    <module>cloud-gateway-gateway9527</module>
+    <module>cloud-config-center-3344</module>
   </modules>
 
-<!--  统一jar包版本管理-->
+  <!--  统一jar包版本管理-->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
