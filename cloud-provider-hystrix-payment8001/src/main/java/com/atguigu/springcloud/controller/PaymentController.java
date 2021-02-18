@@ -14,23 +14,30 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 public class PaymentController {
-    @Autowired
-    private PaymentService paymentService;
+  @Autowired
+  private PaymentService paymentService;
 
-    @Value("server.port")
-    private String serverPort;
+  @Value("server.port")
+  private String serverPort;
 
-    @GetMapping("/payment/hystrix/ok/{id}")
-    public String paymentInfo_OK(@PathVariable("id") Integer id) {
-        String result = paymentService.paymentInfo_OK(id);
-        log.info("result:{}", result);
-        return result;
-    }
+  @GetMapping("/payment/hystrix/ok/{id}")
+  public String paymentInfo_OK(@PathVariable("id") Integer id) {
+    String result = paymentService.paymentInfo_OK(id);
+    log.info("result:{}", result);
+    return result;
+  }
 
-    @GetMapping("/payment/hystrix/timeout/{id}")
-    public String paymentInfo_TIMEOUT(@PathVariable("id") Integer id) {
-        String result = paymentService.paymentInfo_TIMEOUT(id);
-        log.info("result:{}", result);
-        return result;
-    }
+  @GetMapping("/payment/hystrix/timeout/{id}")
+  public String paymentInfo_TIMEOUT(@PathVariable("id") Integer id) {
+    String result = paymentService.paymentInfo_TIMEOUT(id);
+    log.info("result:{}", result);
+    return result;
+  }
+
+  @GetMapping("/payment/circuit/{id}")
+  public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
+    String result = paymentService.paymentCircuitBreak(id);
+    log.info("result: {}", result);
+    return result;
+  }
 }
